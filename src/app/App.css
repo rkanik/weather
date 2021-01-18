@@ -1,0 +1,113 @@
+:root {
+	--text-primary: white;
+	--text-secondary: #bdbdbd;
+
+	--bg-primary: #191919;
+	--bg-secondary: #313131;
+}
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+body {
+	margin: 0;
+	height: 100vh;
+	font-family: "Roboto", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+	color: var(--text-primary);
+	background-color: var(--bg-primary);
+}
+/* Start Utilities */
+.container {
+	width: 90%;
+	margin: 0 auto;
+}
+.flex {
+	display: flex;
+}
+.flex.center {
+	justify-content: center;
+	align-items: center;
+}
+/* End Utilites */
+.app__header {
+	padding: 4rem 0;
+	background-color: var(--bg-secondary);
+}
+.header {
+	text-align: center;
+}
+.header__title {
+	margin: 0;
+	font-size: 2em;
+	letter-spacing: 2px;
+	margin-bottom: 0.25rem;
+}
+.header__time {
+	font-weight: lighter;
+	color: var(--text-secondary);
+}
+.header__temp {
+	font-size: 4em;
+	font-weight: bolder;
+	margin: 1.5rem 0;
+}
+.header__temp sup {
+	font-size: 0.5em;
+	color: var(--text-secondary);
+}
+.header__condition {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.header__condition img {
+	width: 36px;
+}
+.header__condition span {
+	font-weight: lighter;
+	font-size: 1em !important;
+	caret-color: var(--text-secondary);
+}
+.header__progress {
+	height: 1.5rem;
+	position: relative;
+	background-color: #212121;
+	border-radius: 2rem;
+	overflow: hidden;
+}
+.header__progress > div {
+	height: 100%;
+	background-color: teal;
+	transition: width 1.5s ease-out;
+}
+.header__countdown {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	font-size: 0.75em;
+	color: var(--text-secondary);
+}
+.forecast__box {
+	display: flex;
+	padding: 0.25rem 0;
+	align-items: center;
+	justify-content: space-between;
+	border-bottom: 1px solid #212121;
+}
+.forecast__temp {
+	margin-right: 1rem;
+}
+.forecast__icon {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+.forecast__icon span {
+	font-size: 0.8em;
+	color: var(--text-secondary);
+	transform: translateY(-8px);
+}
