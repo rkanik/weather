@@ -32,6 +32,12 @@ body {
 	align-items: center;
 }
 /* End Utilites */
+
+.app {
+	max-width: 600px;
+	margin: 0 auto;
+}
+
 .app__header {
 	padding: 4rem 0;
 	background-color: var(--bg-secondary);
@@ -41,13 +47,13 @@ body {
 }
 .header__title {
 	margin: 0;
-	font-size: 2em;
+	font-size: 3em;
 	letter-spacing: 2px;
 	margin-bottom: 0.25rem;
 }
 .header__time {
 	font-weight: lighter;
-	color: var(--text-secondary);
+	color: teal;
 }
 .header__temp {
 	font-size: 4em;
@@ -72,7 +78,7 @@ body {
 	caret-color: var(--text-secondary);
 }
 .header__progress {
-	height: 1.5rem;
+	height: 1rem;
 	position: relative;
 	background-color: #212121;
 	border-radius: 2rem;
@@ -81,22 +87,29 @@ body {
 .header__progress > div {
 	height: 100%;
 	background-color: teal;
-	transition: width 1.5s ease-out;
+	transition: width 2s ease-out;
 }
 .header__countdown {
 	position: absolute;
 	top: 50%;
 	left: 50%;
+	font-size: 0.7em;
 	transform: translate(-50%, -50%);
-	font-size: 0.75em;
 	color: var(--text-secondary);
+}
+.forecast {
+	padding: 0.5rem 0;
 }
 .forecast__box {
 	display: flex;
-	padding: 0.25rem 0;
+	padding: 0.25rem 2rem;
 	align-items: center;
+	background-color: #212121;
 	justify-content: space-between;
 	border-bottom: 1px solid #212121;
+}
+.forecast__box:not(:last-child) {
+	margin-bottom: 0.5rem;
 }
 .forecast__temp {
 	margin-right: 1rem;
@@ -110,4 +123,22 @@ body {
 	font-size: 0.8em;
 	color: var(--text-secondary);
 	transform: translateY(-8px);
+}
+
+.app__error {
+	left: 50%;
+	bottom: -3rem;
+	position: fixed;
+	transform: translate(-50%, -50%);
+	transition: bottom 500ms ease-in-out;
+
+	color: white;
+	background-color: tomato;
+	padding: 0.3rem 2rem;
+	border-radius: 1rem;
+	font-size: 0.9em;
+}
+
+.app__error.show {
+	bottom: 1rem;
 }
